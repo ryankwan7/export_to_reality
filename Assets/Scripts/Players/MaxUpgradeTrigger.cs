@@ -22,7 +22,7 @@ public class MaxUpgradeTrigger : MonoBehaviour
         {
             hasTriggered = true;
             placementManager.SetMaxForType(platformTypeIndex, newMaxValue);
-            gameObject.SetActive(false);
+            // trigger zone stays active for other scripts
         }
     }
 }
