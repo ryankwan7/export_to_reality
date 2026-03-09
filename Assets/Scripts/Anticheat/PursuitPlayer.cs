@@ -13,13 +13,14 @@ public class PursuitPlayer : MonoBehaviour
             transform.position = PathRecord.recordedPositions.Dequeue();
         }
     }
-    // private void OnCollisionEnter2D(Collision2D collision)
-    // {
-    //     MoverController2D playerScript = collision.gameObject.GetComponent<MoverController2D>();
-    //     if (playerScript != null)
-    //     {
-    //         Debug.Log("Caught by Anticheat");
-    //         playerScript.ResetPlayer();
-    //     }
-    // }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        MoverController2D playerScript = collision.gameObject.GetComponent<MoverController2D>();
+        if (playerScript != null)
+        {
+            Debug.Log("Caught by Anticheat");
+            playerScript.ResetPlayer();
+            Destroy(gameObject);
+        }
+    }
 }
