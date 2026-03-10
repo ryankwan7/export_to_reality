@@ -10,7 +10,6 @@ public class SpawnAnticheat : MonoBehaviour
         // 1. Check if it's the player
         if (collision.gameObject.CompareTag("Player"))
         {
-            PathRecord.recordedPositions.Clear();
             if (GameObject.FindWithTag("Anticheat")==null) 
             {
                 Instantiate(anticheatPrefab, spawnPoint.position, Quaternion.identity);

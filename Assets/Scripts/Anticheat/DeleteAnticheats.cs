@@ -6,6 +6,7 @@ public class DeleteAnticheats : MonoBehaviour
         {
             if (other.CompareTag("Player"))
             {
+                PathRecord.recordedSnapshots.Clear();
                 GameObject enemy = GameObject.FindWithTag("Anticheat");
                 if (enemy != null)
                 {
