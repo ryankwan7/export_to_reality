@@ -1,0 +1,1066 @@
+fileFormatVersion: 2
+guid: 206d26ca89e7fb70c9c06c5cbbd7b13e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5866986253882509953
+    second: mover_idle_128x128_36frames_0
+  - first:
+      213: 7738037835454223133
+    second: mover_idle_128x128_36frames_1
+  - first:
+      213: -3078253724679352078
+    second: mover_idle_128x128_36frames_2
+  - first:
+      213: 1845574863795212447
+    second: mover_idle_128x128_36frames_3
+  - first:
+      213: -6357547904902290872
+    second: mover_idle_128x128_36frames_4
+  - first:
+      213: -5522819496890582766
+    second: mover_idle_128x128_36frames_5
+  - first:
+      213: -2353611406775391026
+    second: mover_idle_128x128_36frames_6
+  - first:
+      213: 9101651731016645092
+    second: mover_idle_128x128_36frames_7
+  - first:
+      213: 2712826276044492699
+    second: mover_idle_128x128_36frames_8
+  - first:
+      213: -2383803242691213363
+    second: mover_idle_128x128_36frames_9
+  - first:
+      213: -4682414601455154964
+    second: mover_idle_128x128_36frames_10
+  - first:
+      213: -6173457845531730199
+    second: mover_idle_128x128_36frames_11
+  - first:
+      213: 6597878381046725488
+    second: mover_idle_128x128_36frames_12
+  - first:
+      213: 2123833509937690833
+    second: mover_idle_128x128_36frames_13
+  - first:
+      213: 1253251278052505823
+    second: mover_idle_128x128_36frames_14
+  - first:
+      213: -1613125444218795330
+    second: mover_idle_128x128_36frames_15
+  - first:
+      213: -3544296124282807951
+    second: mover_idle_128x128_36frames_16
+  - first:
+      213: -3885971965083427927
+    second: mover_idle_128x128_36frames_17
+  - first:
+      213: 5297758384006574412
+    second: mover_idle_128x128_36frames_18
+  - first:
+      213: 3565924341080415316
+    second: mover_idle_128x128_36frames_19
+  - first:
+      213: -7982025419785307426
+    second: mover_idle_128x128_36frames_20
+  - first:
+      213: 7739968333829367150
+    second: mover_idle_128x128_36frames_21
+  - first:
+      213: 5570974359909371640
+    second: mover_idle_128x128_36frames_22
+  - first:
+      213: 7577287059764858560
+    second: mover_idle_128x128_36frames_23
+  - first:
+      213: -7891878596149312178
+    second: mover_idle_128x128_36frames_24
+  - first:
+      213: -1115873218420884364
+    second: mover_idle_128x128_36frames_25
+  - first:
+      213: -1213768211144299824
+    second: mover_idle_128x128_36frames_26
+  - first:
+      213: -3022239266547906893
+    second: mover_idle_128x128_36frames_27
+  - first:
+      213: 1661854780890043738
+    second: mover_idle_128x128_36frames_28
+  - first:
+      213: 5706857372630439105
+    second: mover_idle_128x128_36frames_29
+  - first:
+      213: 5469606408594258872
+    second: mover_idle_128x128_36frames_30
+  - first:
+      213: -2584873424182924437
+    second: mover_idle_128x128_36frames_31
+  - first:
+      213: -47738190835731236
+    second: mover_idle_128x128_36frames_32
+  - first:
+      213: -744422262706107444
+    second: mover_idle_128x128_36frames_33
+  - first:
+      213: -8674985303561832018
+    second: mover_idle_128x128_36frames_34
+  - first:
+      213: 3824035354303294777
+    second: mover_idle_128x128_36frames_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_0
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 1348
+        width: 69
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f75bb333617449ea0800000000000000
+      internalID: -5866986253882509953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_1
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 1348
+        width: 69
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1318c8d968036b60800000000000000
+      internalID: 7738037835454223133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_2
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1348
+        width: 69
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f0d6f3fb88d745d0800000000000000
+      internalID: -3078253724679352078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_3
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 1348
+        width: 69
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9057e27f8ccc9910800000000000000
+      internalID: 1845574863795212447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_4
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 1349
+        width: 69
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84225cd3dd375c7a0800000000000000
+      internalID: -6357547904902290872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_5
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 1348
+        width: 69
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2193c31cde00b53b0800000000000000
+      internalID: -5522819496890582766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_6
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 1093
+        width: 69
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecc68df35ea465fd0800000000000000
+      internalID: -2353611406775391026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_7
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 1092
+        width: 69
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e9f098d6009f4e70800000000000000
+      internalID: 9101651731016645092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_8
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1093
+        width: 69
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9f4af8ff15e5a520800000000000000
+      internalID: 2712826276044492699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_9
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 1092
+        width: 69
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc747f8a4970beed0800000000000000
+      internalID: -2383803242691213363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_10
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 1092
+        width: 69
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce8c92d7ab8b40fb0800000000000000
+      internalID: -4682414601455154964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_11
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 1092
+        width: 69
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ee9b314cc8735aa0800000000000000
+      internalID: -6173457845531730199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_12
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 836
+        width: 69
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07bf4853e6f509b50800000000000000
+      internalID: 6597878381046725488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_13
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 837
+        width: 69
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d838e1235f597d10800000000000000
+      internalID: 2123833509937690833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_14
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 837
+        width: 69
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd8bf9ab561746110800000000000000
+      internalID: 1253251278052505823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_15
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 837
+        width: 69
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebac13784f60d99e0800000000000000
+      internalID: -1613125444218795330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_16
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 836
+        width: 69
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1795455147120dec0800000000000000
+      internalID: -3544296124282807951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_17
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 836
+        width: 69
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ab53162611421ac0800000000000000
+      internalID: -3885971965083427927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_18
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 581
+        width: 69
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c413f887e2b658940800000000000000
+      internalID: 5297758384006574412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_19
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 580
+        width: 69
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45c540e8b45bc7130800000000000000
+      internalID: 3565924341080415316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_20
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 580
+        width: 69
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edafe89db262a3190800000000000000
+      internalID: -7982025419785307426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_21
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 580
+        width: 69
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e65eba60134e96b60800000000000000
+      internalID: 7739968333829367150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_22
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 580
+        width: 69
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fe053ff9a3105d40800000000000000
+      internalID: 5570974359909371640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_23
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 580
+        width: 69
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cec2764f6ee72960800000000000000
+      internalID: 7577287059764858560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_24
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 324
+        width: 69
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e450302da3a6a7290800000000000000
+      internalID: -7891878596149312178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_25
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 325
+        width: 69
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47cb6a1583f9380f0800000000000000
+      internalID: -1115873218420884364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_26
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 325
+        width: 69
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0da25172e34d72fe0800000000000000
+      internalID: -1213768211144299824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_27
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 325
+        width: 69
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b6cc2b4669de06d0800000000000000
+      internalID: -3022239266547906893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_28
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 325
+        width: 69
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a555c3b4e18101710800000000000000
+      internalID: 1661854780890043738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_29
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 325
+        width: 69
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c4d47f4b84d23f40800000000000000
+      internalID: 5706857372630439105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_30
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 69
+        width: 69
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bbf575ac02f7eb40800000000000000
+      internalID: 5469606408594258872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_31
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 69
+        width: 69
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6baa32e05fa02cd0800000000000000
+      internalID: -2584873424182924437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_32
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 68
+        width: 69
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd4340d4e56665ff0800000000000000
+      internalID: -47738190835731236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_33
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 68
+        width: 69
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccb828c65e74ba5f0800000000000000
+      internalID: -744422262706107444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_34
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 68
+        width: 69
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea9767514d24c9780800000000000000
+      internalID: -8674985303561832018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_idle_128x128_36frames_35
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 68
+        width: 69
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93d68c5e4e3b11530800000000000000
+      internalID: 3824035354303294777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: dae96a50b8d0660849c7c8e7671b2f63
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      mover_idle_128x128_36frames_0: -5866986253882509953
+      mover_idle_128x128_36frames_1: 7738037835454223133
+      mover_idle_128x128_36frames_10: -4682414601455154964
+      mover_idle_128x128_36frames_11: -6173457845531730199
+      mover_idle_128x128_36frames_12: 6597878381046725488
+      mover_idle_128x128_36frames_13: 2123833509937690833
+      mover_idle_128x128_36frames_14: 1253251278052505823
+      mover_idle_128x128_36frames_15: -1613125444218795330
+      mover_idle_128x128_36frames_16: -3544296124282807951
+      mover_idle_128x128_36frames_17: -3885971965083427927
+      mover_idle_128x128_36frames_18: 5297758384006574412
+      mover_idle_128x128_36frames_19: 3565924341080415316
+      mover_idle_128x128_36frames_2: -3078253724679352078
+      mover_idle_128x128_36frames_20: -7982025419785307426
+      mover_idle_128x128_36frames_21: 7739968333829367150
+      mover_idle_128x128_36frames_22: 5570974359909371640
+      mover_idle_128x128_36frames_23: 7577287059764858560
+      mover_idle_128x128_36frames_24: -7891878596149312178
+      mover_idle_128x128_36frames_25: -1115873218420884364
+      mover_idle_128x128_36frames_26: -1213768211144299824
+      mover_idle_128x128_36frames_27: -3022239266547906893
+      mover_idle_128x128_36frames_28: 1661854780890043738
+      mover_idle_128x128_36frames_29: 5706857372630439105
+      mover_idle_128x128_36frames_3: 1845574863795212447
+      mover_idle_128x128_36frames_30: 5469606408594258872
+      mover_idle_128x128_36frames_31: -2584873424182924437
+      mover_idle_128x128_36frames_32: -47738190835731236
+      mover_idle_128x128_36frames_33: -744422262706107444
+      mover_idle_128x128_36frames_34: -8674985303561832018
+      mover_idle_128x128_36frames_35: 3824035354303294777
+      mover_idle_128x128_36frames_4: -6357547904902290872
+      mover_idle_128x128_36frames_5: -5522819496890582766
+      mover_idle_128x128_36frames_6: -2353611406775391026
+      mover_idle_128x128_36frames_7: 9101651731016645092
+      mover_idle_128x128_36frames_8: 2712826276044492699
+      mover_idle_128x128_36frames_9: -2383803242691213363
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
