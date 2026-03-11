@@ -17,6 +17,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player") && !isActive)
         {
+            uiText.text = "";
             isActive = true;
             currentMessageIndex = 0;
             timer = 0f;
@@ -47,7 +48,7 @@ public class DialogueTrigger : MonoBehaviour
         }
         else
         {
-            uiText.text = "";
+            // uiText.text = "";
             isActive = false;
         }
     }
