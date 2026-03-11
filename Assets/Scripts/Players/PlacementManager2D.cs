@@ -336,4 +336,11 @@ public class PlacementManager2D : MonoBehaviour
         }
     }
 
+    public void SetMaxForType(int typeIndex, int newMax)
+    {
+        if (maxPerType == null || typeIndex < 0 || typeIndex >= maxPerType.Length) return;
+        maxPerType[typeIndex] = newMax;
+        RefreshCountersUI();
+    }
+
 }

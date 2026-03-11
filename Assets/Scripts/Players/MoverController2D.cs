@@ -13,6 +13,8 @@ public class MoverController2D : MonoBehaviour
     [SerializeField] private float groundCheckDistance = 0.1f;
     [SerializeField] private Vector2 groundCheckOffset = new Vector2(0f, -0.5f);
 
+    [SerializeField] private Animator animator;
+
     [Header("Respawn")]
     [SerializeField] private Vector2 respawnOffset = new Vector2(0.75f, 1.0f); // up and right
 
@@ -65,7 +67,17 @@ public class MoverController2D : MonoBehaviour
         return hit.collider != null && hit.collider != col;
     }
 
-    public void OnMove(InputValue value) => moveInput = value.Get<Vector2>();
+    public void OnMove(InputValue value){
+        moveInput = value.Get<Vector2>();
+        if (Mathf.Abs(moveInput.x) > 0.01f)
+        {
+            animator.SetBool("isRunning",true);
+        }
+        else
+        {
+            animator.SetBool("isRunning",false);
+        }
+    }
 
     public void OnRespawn(InputValue value)
     {
@@ -104,13 +116,26 @@ public class MoverController2D : MonoBehaviour
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
+        float direction = moveInput.x < 0 ? -1 : 1;
+        if(!animator.GetBool("isJumping"))
+        {
+            transform.localScale = new Vector3(direction*5, 5, 5);
+        }
+        else // For jump sprites that face the wrong way
+        {
+            transform.localScale = new Vector3(-direction*5, 5, 5);
+        }
+
+        if (animator.GetBool("isJumping") && IsGrounded()){
+            animator.SetBool("isJumping",false);
+        }
 
         if (jumpQueued)
         {
             jumpQueued = false;
-
             if (IsGrounded())
                 rb.AddForce(Vector2.up * jumpImpulse, ForceMode2D.Impulse);
+                animator.SetBool("isJumping",true);
         }
     }
 }

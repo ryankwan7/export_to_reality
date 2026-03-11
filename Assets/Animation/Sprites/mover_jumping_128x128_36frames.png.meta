@@ -1,0 +1,1066 @@
+fileFormatVersion: 2
+guid: c157379541b84c5ac91d39050d88d586
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7419259106981732360
+    second: mover_jumping_128x128_36frames_0
+  - first:
+      213: -1281406141766131417
+    second: mover_jumping_128x128_36frames_1
+  - first:
+      213: -636663892757154482
+    second: mover_jumping_128x128_36frames_2
+  - first:
+      213: -1431575048340573746
+    second: mover_jumping_128x128_36frames_3
+  - first:
+      213: -3314657931625485610
+    second: mover_jumping_128x128_36frames_4
+  - first:
+      213: -7432635234541064056
+    second: mover_jumping_128x128_36frames_5
+  - first:
+      213: -3420689762773539338
+    second: mover_jumping_128x128_36frames_6
+  - first:
+      213: -2907868892414712331
+    second: mover_jumping_128x128_36frames_7
+  - first:
+      213: -5800344138112408625
+    second: mover_jumping_128x128_36frames_8
+  - first:
+      213: -7508942138164471100
+    second: mover_jumping_128x128_36frames_9
+  - first:
+      213: -82257534793780595
+    second: mover_jumping_128x128_36frames_10
+  - first:
+      213: 2975625766961849563
+    second: mover_jumping_128x128_36frames_11
+  - first:
+      213: -7332708545957580673
+    second: mover_jumping_128x128_36frames_12
+  - first:
+      213: 7993463013310495206
+    second: mover_jumping_128x128_36frames_13
+  - first:
+      213: -4853766419214522577
+    second: mover_jumping_128x128_36frames_14
+  - first:
+      213: 814224998170320094
+    second: mover_jumping_128x128_36frames_15
+  - first:
+      213: -81048836403106267
+    second: mover_jumping_128x128_36frames_16
+  - first:
+      213: -7725064754184568854
+    second: mover_jumping_128x128_36frames_17
+  - first:
+      213: 4125225298387586129
+    second: mover_jumping_128x128_36frames_18
+  - first:
+      213: 8675539540488698935
+    second: mover_jumping_128x128_36frames_19
+  - first:
+      213: 1126580523602090990
+    second: mover_jumping_128x128_36frames_20
+  - first:
+      213: -4430215166518318455
+    second: mover_jumping_128x128_36frames_21
+  - first:
+      213: -3211733051353798503
+    second: mover_jumping_128x128_36frames_22
+  - first:
+      213: 3876038613149492640
+    second: mover_jumping_128x128_36frames_23
+  - first:
+      213: 6776608059149991740
+    second: mover_jumping_128x128_36frames_24
+  - first:
+      213: -1191753553371704727
+    second: mover_jumping_128x128_36frames_25
+  - first:
+      213: -3770095044764179702
+    second: mover_jumping_128x128_36frames_26
+  - first:
+      213: -8432250462860177990
+    second: mover_jumping_128x128_36frames_27
+  - first:
+      213: 1831844381939876187
+    second: mover_jumping_128x128_36frames_28
+  - first:
+      213: -2427674092748353892
+    second: mover_jumping_128x128_36frames_29
+  - first:
+      213: -1673445748112010020
+    second: mover_jumping_128x128_36frames_30
+  - first:
+      213: -6852367657430117671
+    second: mover_jumping_128x128_36frames_31
+  - first:
+      213: -5251292694993447701
+    second: mover_jumping_128x128_36frames_32
+  - first:
+      213: 7025317988142113492
+    second: mover_jumping_128x128_36frames_33
+  - first:
+      213: 3208750051608525283
+    second: mover_jumping_128x128_36frames_34
+  - first:
+      213: -2026678546333856799
+    second: mover_jumping_128x128_36frames_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1343
+        width: 90
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8006a3059d086f660800000000000000
+      internalID: 7419259106981732360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_1
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 1343
+        width: 90
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 721a60b37e7873ee0800000000000000
+      internalID: -1281406141766131417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_2
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 1343
+        width: 86
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4574ee009d1a27f0800000000000000
+      internalID: -636663892757154482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_3
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 1343
+        width: 85
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec1f85e0416022ce0800000000000000
+      internalID: -1431575048340573746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_4
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 1360
+        width: 87
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6da28894c28fff1d0800000000000000
+      internalID: -3314657931625485610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_5
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 1367
+        width: 93
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 880b02c42a9f9d890800000000000000
+      internalID: -7432635234541064056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_6
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1115
+        width: 99
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f5611bc8c44780d0800000000000000
+      internalID: -3420689762773539338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_7
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1118
+        width: 103
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f5663e16ac25a7d0800000000000000
+      internalID: -2907868892414712331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_8
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1118
+        width: 103
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc36ac8ecb9018fa0800000000000000
+      internalID: -5800344138112408625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_9
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 1118
+        width: 103
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca9ebfc8e0eac790800000000000000
+      internalID: -7508942138164471100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_10
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 1116
+        width: 103
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d82748a3533cbdef0800000000000000
+      internalID: -82257534793780595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_11
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 1113
+        width: 102
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd4a2489edb8b4920800000000000000
+      internalID: 2975625766961849563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_12
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 848
+        width: 101
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f703ab48d6cfc3a90800000000000000
+      internalID: -7332708545957580673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_13
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 831
+        width: 96
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e97899624c7eee60800000000000000
+      internalID: 7993463013310495206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_14
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 831
+        width: 92
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f27aff77825f3acb0800000000000000
+      internalID: -4853766419214522577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_15
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 831
+        width: 91
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edc5f276255bc4b00800000000000000
+      internalID: 814224998170320094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_16
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 831
+        width: 91
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52eebb0438e00eef0800000000000000
+      internalID: -81048836403106267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_17
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 831
+        width: 90
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aef30f3098e0bc490800000000000000
+      internalID: -7725064754184568854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_18
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 575
+        width: 91
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15cc8d07d8ebf3930800000000000000
+      internalID: 4125225298387586129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_19
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 575
+        width: 87
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73c3fa14f35b56870800000000000000
+      internalID: 8675539540488698935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_20
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 576
+        width: 84
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeb1d20740b62af00800000000000000
+      internalID: 1126580523602090990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_21
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 591
+        width: 86
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98aa02147c6b482c0800000000000000
+      internalID: -4430215166518318455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_22
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 597
+        width: 93
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 998eca86ec1ad63d0800000000000000
+      internalID: -3211733051353798503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_23
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 603
+        width: 99
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a5297025947ac530800000000000000
+      internalID: 3876038613149492640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_24
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 350
+        width: 103
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3f3fa330295b0e50800000000000000
+      internalID: 6776608059149991740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_25
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 350
+        width: 103
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9625877157a067fe0800000000000000
+      internalID: -1191753553371704727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_26
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 350
+        width: 103
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a03ee57188eedabc0800000000000000
+      internalID: -3770095044764179702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_27
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 350
+        width: 103
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abd881841e0aafa80800000000000000
+      internalID: -8432250462860177990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_28
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 344
+        width: 102
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b51425582c40c6910800000000000000
+      internalID: 1831844381939876187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_29
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 339
+        width: 102
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9ec057664b2f4ed0800000000000000
+      internalID: -2427674092748353892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_30
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 76
+        width: 100
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd455e855f9b6c8e0800000000000000
+      internalID: -1673445748112010020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_31
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 67
+        width: 98
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d29084cbef77e0a0800000000000000
+      internalID: -6852367657430117671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_32
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 63
+        width: 94
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be4df4fcd19af17b0800000000000000
+      internalID: -5251292694993447701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_33
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 63
+        width: 93
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d26f5d0d71fe7160800000000000000
+      internalID: 7025317988142113492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_34
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 63
+        width: 92
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e97427db25c78c20800000000000000
+      internalID: 3208750051608525283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mover_jumping_128x128_36frames_35
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 63
+        width: 91
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eb8dd3999acfd3e0800000000000000
+      internalID: -2026678546333856799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      mover_jumping_128x128_36frames_0: 7419259106981732360
+      mover_jumping_128x128_36frames_1: -1281406141766131417
+      mover_jumping_128x128_36frames_10: -82257534793780595
+      mover_jumping_128x128_36frames_11: 2975625766961849563
+      mover_jumping_128x128_36frames_12: -7332708545957580673
+      mover_jumping_128x128_36frames_13: 7993463013310495206
+      mover_jumping_128x128_36frames_14: -4853766419214522577
+      mover_jumping_128x128_36frames_15: 814224998170320094
+      mover_jumping_128x128_36frames_16: -81048836403106267
+      mover_jumping_128x128_36frames_17: -7725064754184568854
+      mover_jumping_128x128_36frames_18: 4125225298387586129
+      mover_jumping_128x128_36frames_19: 8675539540488698935
+      mover_jumping_128x128_36frames_2: -636663892757154482
+      mover_jumping_128x128_36frames_20: 1126580523602090990
+      mover_jumping_128x128_36frames_21: -4430215166518318455
+      mover_jumping_128x128_36frames_22: -3211733051353798503
+      mover_jumping_128x128_36frames_23: 3876038613149492640
+      mover_jumping_128x128_36frames_24: 6776608059149991740
+      mover_jumping_128x128_36frames_25: -1191753553371704727
+      mover_jumping_128x128_36frames_26: -3770095044764179702
+      mover_jumping_128x128_36frames_27: -8432250462860177990
+      mover_jumping_128x128_36frames_28: 1831844381939876187
+      mover_jumping_128x128_36frames_29: -2427674092748353892
+      mover_jumping_128x128_36frames_3: -1431575048340573746
+      mover_jumping_128x128_36frames_30: -1673445748112010020
+      mover_jumping_128x128_36frames_31: -6852367657430117671
+      mover_jumping_128x128_36frames_32: -5251292694993447701
+      mover_jumping_128x128_36frames_33: 7025317988142113492
+      mover_jumping_128x128_36frames_34: 3208750051608525283
+      mover_jumping_128x128_36frames_35: -2026678546333856799
+      mover_jumping_128x128_36frames_4: -3314657931625485610
+      mover_jumping_128x128_36frames_5: -7432635234541064056
+      mover_jumping_128x128_36frames_6: -3420689762773539338
+      mover_jumping_128x128_36frames_7: -2907868892414712331
+      mover_jumping_128x128_36frames_8: -5800344138112408625
+      mover_jumping_128x128_36frames_9: -7508942138164471100
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
