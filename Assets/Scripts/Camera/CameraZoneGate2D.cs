@@ -7,9 +7,8 @@ public class CameraZoneGate2D : MonoBehaviour
     [SerializeField] private int leftZoneIndex = 0;
     [SerializeField] private int rightZoneIndex = 1;
     [SerializeField] private string playerTag = "Player";
-    [SerializeField] private Transform respawnPoint;
+    [SerializeField] public bool reverseDirection = false;
 
-    // Track entry side per collider (supports multiple players if needed)
     private readonly Dictionary<Collider2D, bool> enteredFromLeft = new Dictionary<Collider2D, bool>();
 
     private void Reset()
@@ -31,14 +30,7 @@ public class CameraZoneGate2D : MonoBehaviour
         float gateX = transform.position.x;
         float x = other.bounds.center.x;
 
-        // true if the player started on the left side when they entered the trigger
         enteredFromLeft[other] = (x < gateX);
-
-        var mover = other.GetComponent<MoverController2D>();
-        if (mover != null)
-        {
-            mover.SetRespawnFromGate(respawnPoint != null ? respawnPoint : transform);
-        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -53,13 +45,13 @@ public class CameraZoneGate2D : MonoBehaviour
         if (enteredFromLeft.TryGetValue(other, out bool val))
             wasFromLeft = val;
 
-        // If they entered from left and exited on right -> moved left->right
-        if (wasFromLeft && x > gateX)
-            cameraController.SetZone(rightZoneIndex);
+        int zoneLeft  = reverseDirection ? rightZoneIndex : leftZoneIndex;
+        int zoneRight = reverseDirection ? leftZoneIndex  : rightZoneIndex;
 
-        // If they entered from right and exited on left -> moved right->left
+        if (wasFromLeft && x > gateX)
+            cameraController.SetZone(zoneRight);
         else if (!wasFromLeft && x < gateX)
-            cameraController.SetZone(leftZoneIndex);
+            cameraController.SetZone(zoneLeft);
 
         enteredFromLeft.Remove(other);
     }
