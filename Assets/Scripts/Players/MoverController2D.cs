@@ -24,6 +24,7 @@ public class MoverController2D : MonoBehaviour
     private Collider2D col;
 
     private Vector3 respawnPosition;
+    public System.Action OnRespawnCallback;
 
     private void Awake()
     {
@@ -44,6 +45,8 @@ public class MoverController2D : MonoBehaviour
 
         rb.linearVelocity = Vector2.zero;
         rb.angularVelocity = 0f;
+
+        OnRespawnCallback?.Invoke();
 
         Debug.Log($"Player respawned at {respawnPosition}");
     }
@@ -98,10 +101,10 @@ public class MoverController2D : MonoBehaviour
             ResetPlayer();
         }
 
-        if(other.CompareTag("Door"))
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelector");   
-        }
+        // if(other.CompareTag("Door"))
+        // {
+        //     UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelector");   
+        // }
 
         /*
         if(other.CompareTag("DialogueTrigger"))
