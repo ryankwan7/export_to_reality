@@ -19,4 +19,14 @@ public class LevelSelector : MonoBehaviour
     {
         SceneManager.LoadScene(levelName);
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("LEVEL SELECTOR: Player entered level selector trigger.");
+            // Load the level selector scene
+            UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelector");
+        }
+    }
 }
