@@ -102,6 +102,15 @@ public class MoverController2D : MonoBehaviour
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelector");   
         }
+
+        /*
+        if(other.CompareTag("DialogueTrigger"))
+        {
+            DialogueTrigger trigger = other.GetComponent<DialogueTrigger>();
+            if (trigger != null)
+                trigger.PrintDialogueToConsole();
+        }
+        */
     }
 
     private void FixedUpdate()
