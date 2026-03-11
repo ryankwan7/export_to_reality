@@ -98,10 +98,10 @@ public class MoverController2D : MonoBehaviour
             ResetPlayer();
         }
 
-        if(other.CompareTag("Door"))
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelector");   
-        }
+        // if(other.CompareTag("Door"))
+        // {
+        //     UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelector");   
+        // }
 
         /*
         if(other.CompareTag("DialogueTrigger"))
