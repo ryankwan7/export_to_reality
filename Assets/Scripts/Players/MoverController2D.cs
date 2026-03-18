@@ -56,7 +56,7 @@ public class MoverController2D : MonoBehaviour
         Bounds b = col.bounds;
 
         Vector2 origin = new Vector2(b.center.x, b.min.y + 0.02f);
-        Vector2 size = new Vector2(b.size.x * 0.9f, 0.02f);
+        Vector2 size = new Vector2(b.size.x * 0.9f, 2.0f);
 
         RaycastHit2D hit = Physics2D.BoxCast(
             origin,
@@ -129,7 +129,8 @@ public class MoverController2D : MonoBehaviour
             transform.localScale = new Vector3(-direction*5, 5, 5);
         }
 
-        if (animator.GetBool("isJumping") && IsGrounded()){
+        if (animator.GetBool("isJumping") && IsGrounded())
+        {
             animator.SetBool("isJumping",false);
         }
 
@@ -137,8 +138,11 @@ public class MoverController2D : MonoBehaviour
         {
             jumpQueued = false;
             if (IsGrounded())
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
                 rb.AddForce(Vector2.up * jumpImpulse, ForceMode2D.Impulse);
                 animator.SetBool("isJumping",true);
+            }
         }
     }
 }
