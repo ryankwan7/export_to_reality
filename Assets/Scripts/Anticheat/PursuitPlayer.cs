@@ -4,6 +4,7 @@ public class PursuitPlayer : MonoBehaviour
 {
     public int frameDelay = 200; // Delay between mover and anticheat movement
     private int currentFrame = 0;
+    private int rubberBand=350;
     [SerializeField] private Animator cloneAnimator;
 
     [Header("After-Image Settings")]
@@ -14,20 +15,31 @@ public class PursuitPlayer : MonoBehaviour
     void FixedUpdate()
     {
         currentFrame++;
-        if (currentFrame > frameDelay && PathRecord.recordedSnapshots.Count > 0)
+        int snapshotsInQueue = PathRecord.recordedSnapshots.Count;
+        int processCount = snapshotsInQueue switch
         {
-            PlayerSnapshot snapshot = PathRecord.recordedSnapshots.Dequeue();
-
-            transform.position = snapshot.position;
-
-            cloneAnimator.SetBool("isRunning", snapshot.isRunning);
-            cloneAnimator.SetBool("isJumping", snapshot.isJumping);
-
-            transform.localScale = new Vector3(snapshot.scaleX, 5, 5);
-            if (Vector3.Distance(transform.position, lastImagePos) > distanceBetweenImages)
+            var s when s >=rubberBand*3=>4,
+            var s when s >=rubberBand*2=>3,
+            var s when s >=rubberBand*1=>2,
+            _=>1
+        };
+        for (int i = 0; i < processCount; i++)
+        {
+            if (currentFrame > frameDelay && PathRecord.recordedSnapshots.Count > 0)
             {
-                SpawnGhost();
-                lastImagePos = transform.position;
+                PlayerSnapshot snapshot = PathRecord.recordedSnapshots.Dequeue();
+                if (i==0){
+                    transform.position = snapshot.position;
+                    cloneAnimator.SetBool("isRunning", snapshot.isRunning);
+                    cloneAnimator.SetBool("isJumping", snapshot.isJumping);
+                    transform.localScale = new Vector3(snapshot.scaleX, 5, 5);
+                }
+
+                if (Vector3.Distance(transform.position, lastImagePos) > distanceBetweenImages)
+                {
+                    SpawnGhost();
+                    lastImagePos = transform.position;
+                }
             }
         }
     }

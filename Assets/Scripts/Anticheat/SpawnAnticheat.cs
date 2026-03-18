@@ -12,6 +12,7 @@ public class SpawnAnticheat : MonoBehaviour
         {
             if (GameObject.FindWithTag("Anticheat")==null) 
             {
+                PathRecord.recordedSnapshots.Clear();
                 Instantiate(anticheatPrefab, spawnPoint.position, Quaternion.identity);
             }
         }

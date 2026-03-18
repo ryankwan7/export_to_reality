@@ -6,6 +6,9 @@ TagManager:
   tags:
   - DeathZone
   - Anticheat
+  - Door
+  - DialogueTrigger
+  - Placeable
   layers:
   - Default
   - TransparentFX

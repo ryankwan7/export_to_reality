@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2504589946317519620}
   m_Layer: 6
   m_Name: LongPlaceablePlatform
-  m_TagString: Untagged
+  m_TagString: Placeable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
