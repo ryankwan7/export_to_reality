@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5892979425444471595
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4396888845826084693, guid: c00b2419d1d30ac48a289983211df66c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396888845826084693, guid: c00b2419d1d30ac48a289983211df66c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396888845826084693, guid: c00b2419d1d30ac48a289983211df66c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 388.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396888845826084693, guid: c00b2419d1d30ac48a289983211df66c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -259.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396888845826084693, guid: c00b2419d1d30ac48a289983211df66c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396888845826084693, guid: c00b2419d1d30ac48a289983211df66c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7086065
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396888845826084693, guid: c00b2419d1d30ac48a289983211df66c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396888845826084693, guid: c00b2419d1d30ac48a289983211df66c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396888845826084693, guid: c00b2419d1d30ac48a289983211df66c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.705604
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396888845826084693, guid: c00b2419d1d30ac48a289983211df66c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396888845826084693, guid: c00b2419d1d30ac48a289983211df66c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396888845826084693, guid: c00b2419d1d30ac48a289983211df66c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -89.757
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249832105219832447, guid: c00b2419d1d30ac48a289983211df66c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249832105219832447, guid: c00b2419d1d30ac48a289983211df66c, type: 3}
+      propertyPath: rightOffset
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847590476956675194, guid: c00b2419d1d30ac48a289983211df66c, type: 3}
+      propertyPath: m_Name
+      value: HorizontallyMakerActivatedPlatform Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7847590476956675194, guid: c00b2419d1d30ac48a289983211df66c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5422135291145697320}
+  m_SourcePrefab: {fileID: 100100000, guid: c00b2419d1d30ac48a289983211df66c, type: 3}
+--- !u!1 &4404569249145687889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7847590476956675194, guid: c00b2419d1d30ac48a289983211df66c, type: 3}
+  m_PrefabInstance: {fileID: 5892979425444471595}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5422135291145697320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4404569249145687889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daae199dc4e59fd6f8e98a386684ab92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GlobalDoor2D
+  channelID: 0
+  moveOffset: {x: -50, y: 0}
+  speed: 20
