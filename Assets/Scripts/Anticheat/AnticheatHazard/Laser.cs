@@ -51,7 +51,7 @@ public class Laser : MonoBehaviour
             }
             else if (hit.collider.TryGetComponent<MoverController2D>(out MoverController2D player))
             {
-                if (!player.IsBlueScreened)
+                if (!player.IsBlueScreened && !player.isRebooting)
                 {
                     player.StartBlueScreen(2.0f);                
                 }
@@ -98,13 +98,11 @@ public class Laser : MonoBehaviour
 
         timer += Time.deltaTime;
 
-        // Jitter the victim around their original spot
         float shakeAmount = 0.15f;
         currentVictim.transform.position = originalPos + new Vector3(
             Random.Range(-shakeAmount, shakeAmount),
             Random.Range(-shakeAmount, shakeAmount), 0);
 
-        // Once the timer hits the limit, pop them out of existence
         if (timer >= shakeDuration)
         {
             Destroy(currentVictim);

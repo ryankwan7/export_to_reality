@@ -7,7 +7,6 @@ public class SpawnAnticheat : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // 1. Check if it's the player
         if (collision.gameObject.CompareTag("Player"))
         {
             if (GameObject.FindWithTag("Anticheat")==null) 

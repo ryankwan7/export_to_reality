@@ -67,13 +67,13 @@ public class StunAnticheat : MonoBehaviour
         cloneAnimator.SetBool("isStunned", true);
         if (dizzyParticles != null) dizzyParticles.Play();
 
-        transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-
         rb.gravityScale = 10;
         rb.linearVelocity = Vector2.zero;
         Vector2 hitDirection = (transform.position - collision.transform.position).normalized;
         hitDirection.y = 1f;
         rb.AddForce(hitDirection.normalized * bounceForce, ForceMode2D.Impulse);
+        float faceDir = Mathf.Sign(hitDirection.x);
+        transform.localScale = new Vector3(faceDir * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }
 
     private void HandleBouncingLogic()
@@ -121,8 +121,6 @@ public class StunAnticheat : MonoBehaviour
         rb.gravityScale = originalGravity;
         pursuitPlayer.enabled = true;
         cloneAnimator.SetBool("isStunned", false);
-        
-        transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }
 
     public void ForceCancelStun()

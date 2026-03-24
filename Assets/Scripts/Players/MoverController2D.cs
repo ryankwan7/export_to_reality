@@ -36,6 +36,7 @@ public class MoverController2D : MonoBehaviour
     private float blueScreenTimer = 0f;
     private float blueScreenDuration = 0f;
     private Vector3 originalPosBeforeBSOD;
+    public bool isRebooting = false;
 
     private void Awake()
     {
@@ -181,12 +182,15 @@ public class MoverController2D : MonoBehaviour
         if (warningIcon != null) warningIcon.SetActive(false);
         SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
         if (sr != null) sr.color = Color.white;
-
+        isRebooting = true;
         rb.simulated = true;
         ResetPlayer();
         animator.SetBool("isRunning",false);
         isBlueScreened = false;
+        Invoke("ClearReboot", 0.1f);
     }
+
+    void ClearReboot() => isRebooting = false;
 
     private void FixedUpdate()
     {

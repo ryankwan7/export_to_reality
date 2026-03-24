@@ -338,6 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PursuitPlayer
   frameDelay: 100
+  rubberBand: 250
   cloneAnimator: {fileID: 1720045283863846413}
   ghostPrefab: {fileID: 7897704904004840905, guid: db642781ef84b94dcb179c85a3d474db, type: 3}
   distanceBetweenImages: 0.5
@@ -401,7 +402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StunAnticheat
   currentState: 0
   stunDuration: 2
-  bounceForce: 25
+  bounceForce: 35
   cloneAnimator: {fileID: 1720045283863846413}
   dizzyParticles: {fileID: 3328689357762339012}
   rewindIcon: {fileID: 8663397576390047622}
