@@ -142,7 +142,7 @@ public class MoverController2D : MonoBehaviour
     public void StartBlueScreen(float duration)
     {
         if (isBlueScreened) return;
-
+        animator.SetBool("isStunned",true);
         isBlueScreened = true;
         blueScreenDuration = duration;
         blueScreenTimer = 0f;
@@ -188,6 +188,7 @@ public class MoverController2D : MonoBehaviour
         animator.SetBool("isRunning",false);
         isBlueScreened = false;
         Invoke("ClearReboot", 0.1f);
+        animator.SetBool("isStunned",false);
     }
 
     void ClearReboot() => isRebooting = false;
