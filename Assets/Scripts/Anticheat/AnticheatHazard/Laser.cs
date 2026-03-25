@@ -2,14 +2,8 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-    private enum ExecutionState { Idle, Shaking }
+private enum ExecutionState { Idle, Shaking }
     [SerializeField] private ExecutionState currentState = ExecutionState.Idle;
-
-    [Header("Laser Setup")]
-    public Transform firePoint;
-    public LineRenderer lineRenderer;
-    public float maxDistance = 15f;
-    public LayerMask hitLayers;
 
     [Header("Effect Settings")]
     public float shakeDuration = 2.0f;
@@ -21,46 +15,30 @@ public class Laser : MonoBehaviour
     private Transform victimIcon;
     private float timer;
 
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (currentState == ExecutionState.Idle)
+        if (currentState != ExecutionState.Idle) return;
+        StunAnticheat stunScript = other.GetComponent<StunAnticheat>();
+        PursuitPlayer pursuit = other.GetComponent<PursuitPlayer>();
+
+        if (stunScript != null && pursuit != null && !pursuit.enabled)
         {
-            HandleLaserRaycast();
+            StartExecution(other.gameObject);
         }
-        else
+        else if (other.TryGetComponent<MoverController2D>(out MoverController2D player))
         {
-            HandleExecutionLogic();
+            if (!player.IsBlueScreened && !player.isRebooting)
+            {
+                player.StartBlueScreen(2.0f);
+            }
         }
     }
 
-    private void HandleLaserRaycast()
+    void Update()
     {
-        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right, maxDistance, hitLayers);
-
-        if (hit.collider != null)
+        if (currentState == ExecutionState.Shaking)
         {
-            lineRenderer.SetPosition(0, firePoint.position);
-            lineRenderer.SetPosition(1, hit.point);
-
-            StunAnticheat stunScript = hit.collider.GetComponent<StunAnticheat>();
-            PursuitPlayer pursuit = hit.collider.GetComponent<PursuitPlayer>();
-
-            if (stunScript != null && pursuit != null && !pursuit.enabled)
-            {
-                StartExecution(hit.collider.gameObject);
-            }
-            else if (hit.collider.TryGetComponent<MoverController2D>(out MoverController2D player))
-            {
-                if (!player.IsBlueScreened && !player.isRebooting)
-                {
-                    player.StartBlueScreen(2.0f);                
-                }
-            }
-        }
-        else
-        {
-            lineRenderer.SetPosition(0, firePoint.position);
-            lineRenderer.SetPosition(1, firePoint.position + firePoint.right * maxDistance);
+            HandleExecutionLogic();
         }
     }
 
@@ -70,15 +48,16 @@ public class Laser : MonoBehaviour
         currentState = ExecutionState.Shaking;
         timer = 0;
 
+        // Stop the victim's movement
         if (currentVictim.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
         {
             rb.linearVelocity = Vector2.zero;
-            rb.simulated = false;
+            rb.simulated = false; // Freeze them in place
         }
 
         if (currentVictim.TryGetComponent<StunAnticheat>(out var stun)) { stun.ForceCancelStun(); }
-        if (currentVictim.TryGetComponent<PursuitPlayer>(out var move)) { move.enabled = false; }
-
+        
+        // Find visuals
         victimIcon = currentVictim.transform.Find("WarningIcon");
         if (victimIcon != null) victimIcon.gameObject.SetActive(true);
 
@@ -92,25 +71,23 @@ public class Laser : MonoBehaviour
     {
         if (currentVictim == null)
         {
-            ResetLaser();
+            ResetTrap();
             return;
         }
 
         timer += Time.deltaTime;
 
-        float shakeAmount = 0.15f;
-        currentVictim.transform.position = originalPos + new Vector3(
-            Random.Range(-shakeAmount, shakeAmount),
-            Random.Range(-shakeAmount, shakeAmount), 0);
+        float shakeAmount = 0.1f;
+        currentVictim.transform.position = originalPos + (Vector3)Random.insideUnitCircle * shakeAmount;
 
         if (timer >= shakeDuration)
         {
             Destroy(currentVictim);
-            ResetLaser();
+            ResetTrap();
         }
     }
 
-    private void ResetLaser()
+    private void ResetTrap()
     {
         currentState = ExecutionState.Idle;
         currentVictim = null;
