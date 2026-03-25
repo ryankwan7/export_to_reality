@@ -32,12 +32,6 @@ public class PlacementManager2D : MonoBehaviour
     [Header("UI Counters (one per prefab index)")]
     [SerializeField] private TMP_Text[] typeCounterTexts;
 
-    [Header("Keybinds")]
-    [Tooltip("Key to clear all placed platforms")]
-    [SerializeField] private Key clearAllKey = Key.Digit1;
-    [Tooltip("Keys for selecting platforms")]
-    [SerializeField] private Key[] platformSelectKeys;
-
     [SerializeField] private Color counterNormalColor = Color.white;
     [SerializeField] private Color counterMaxColor = Color.red;
 
@@ -73,31 +67,11 @@ public class PlacementManager2D : MonoBehaviour
         }
 
         RefreshCountersUI();
-    }
 
-    private void HandleKeybinds()
-    {
-        if (Keyboard.current == null) return;
-
-        if (Keyboard.current[clearAllKey].wasPressedThisFrame)
-        {
-            ClearAllPlaced();
-        }
-
-        for (int i = 0; i < platformSelectKeys.Length; i++)
-        {
-            if (Keyboard.current[platformSelectKeys[i]].wasPressedThisFrame)
-            {
-                StartPlacing(i);
-                break;
-            }
-        }
     }
 
     void Update()
     {
-        HandleKeybinds();
-
         if (Mouse.current == null) return;
 
         if (isPlacing && ghost != null)
