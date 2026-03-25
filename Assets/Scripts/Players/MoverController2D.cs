@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
+
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class MoverController2D : MonoBehaviour
@@ -25,13 +27,23 @@ public class MoverController2D : MonoBehaviour
 
     private Vector3 respawnPosition;
     public System.Action OnRespawnCallback;
+    
+    [Header("Blue Screen Visuals")]
+    [SerializeField] private GameObject warningIcon;
+    private bool isBlueScreened = false;
+    public bool IsBlueScreened => isBlueScreened;
+
+    private float blueScreenTimer = 0f;
+    private float blueScreenDuration = 0f;
+    private Vector3 originalPosBeforeBSOD;
+    public bool isRebooting = false;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
 
-        respawnPosition = transform.position; // default to start
+        respawnPosition = transform.position;
     }
 
     public void SetRespawnFromGate(Transform gateTransform)
@@ -71,6 +83,7 @@ public class MoverController2D : MonoBehaviour
     }
 
     public void OnMove(InputValue value){
+        if (isBlueScreened) return;
         moveInput = value.Get<Vector2>();
         if (Mathf.Abs(moveInput.x) > 0.01f)
         {
@@ -84,6 +97,7 @@ public class MoverController2D : MonoBehaviour
 
     public void OnRespawn(InputValue value)
     {
+        if (isBlueScreened) return;
         if (value.isPressed)
             ResetPlayer();
     }
@@ -91,6 +105,7 @@ public class MoverController2D : MonoBehaviour
 
     public void OnJump(InputValue value)
     {
+        if (isBlueScreened) return;
         if (value.isPressed) jumpQueued = true;
     }
 
@@ -116,8 +131,72 @@ public class MoverController2D : MonoBehaviour
         */
     }
 
+    private void Update()
+    {
+        if (isBlueScreened)
+        {
+            HandleBlueScreenLogic();
+        }
+    }
+
+    public void StartBlueScreen(float duration)
+    {
+        if (isBlueScreened) return;
+        animator.SetBool("isStunned",true);
+        isBlueScreened = true;
+        blueScreenDuration = duration;
+        blueScreenTimer = 0f;
+        originalPosBeforeBSOD = transform.position;
+
+        rb.linearVelocity = Vector2.zero;
+        rb.simulated = false;
+        moveInput = Vector2.zero;
+
+        if (warningIcon != null) warningIcon.SetActive(true);
+        SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
+        if (sr != null) sr.color = Color.blue;
+    }
+
+    private void HandleBlueScreenLogic()
+    {
+        blueScreenTimer += Time.deltaTime;
+
+        if (blueScreenTimer < blueScreenDuration)
+        {
+            float shakeIntensity = 0.15f;
+            Vector3 randomOffset = new Vector3(
+                Random.Range(-shakeIntensity, shakeIntensity),
+                Random.Range(-shakeIntensity, shakeIntensity),
+                0
+            );
+            transform.position = originalPosBeforeBSOD + randomOffset;
+        }
+        else
+        {
+            EndBlueScreen();
+        }
+    }
+
+    private void EndBlueScreen()
+    {
+        if (warningIcon != null) warningIcon.SetActive(false);
+        SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
+        if (sr != null) sr.color = Color.white;
+        isRebooting = true;
+        rb.simulated = true;
+        ResetPlayer();
+        animator.SetBool("isRunning",false);
+        isBlueScreened = false;
+        Invoke("ClearReboot", 0.1f);
+        animator.SetBool("isStunned",false);
+    }
+
+    void ClearReboot() => isRebooting = false;
+
     private void FixedUpdate()
     {
+        if (isBlueScreened) return; // Stop all movement logic if blue screened
+
         rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
         float direction = moveInput.x < 0 ? -1 : 1;
         if(!animator.GetBool("isJumping"))

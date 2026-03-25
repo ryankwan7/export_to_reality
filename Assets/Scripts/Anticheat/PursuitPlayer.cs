@@ -4,7 +4,7 @@ public class PursuitPlayer : MonoBehaviour
 {
     public int frameDelay = 200; // Delay between mover and anticheat movement
     private int currentFrame = 0;
-    private int rubberBand=350;
+    public int rubberBand = 250;
     [SerializeField] private Animator cloneAnimator;
 
     [Header("After-Image Settings")]
