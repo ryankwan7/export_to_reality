@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.UI;
 
 public class PlacementManager2D : MonoBehaviour
 {
@@ -41,6 +42,8 @@ public class PlacementManager2D : MonoBehaviour
     [SerializeField] private Color counterNormalColor = Color.white;
     [SerializeField] private Color counterMaxColor = Color.red;
 
+    [Header("UI Button References")]
+    [SerializeField] private Button[] platformButtons; 
 
     private readonly List<GameObject> placedPlatforms = new();
 
@@ -75,6 +78,26 @@ public class PlacementManager2D : MonoBehaviour
         RefreshCountersUI();
     }
 
+private void UpdateButtonVisuals(int activeIndex)
+{
+    // Clear all is index 0, long is index 1
+    if (platformButtons == null || EventSystem.current == null) return;
+    // If activeIndex is valid, tell the EventSystem to highlight that button
+    if (activeIndex >= 0 && activeIndex < platformButtons.Length)
+    {
+        if (platformButtons[activeIndex] != null)
+        {
+            // This triggers the "Selected" color state set in the Inspector
+            platformButtons[activeIndex].Select();
+        }
+    }
+    else
+    {
+        // This returns all buttons to their "Normal" color state
+        EventSystem.current.SetSelectedGameObject(null);
+    }
+}
+
     private void HandleKeybinds()
     {
         if (Keyboard.current == null) return;
@@ -82,6 +105,7 @@ public class PlacementManager2D : MonoBehaviour
         if (Keyboard.current[clearAllKey].wasPressedThisFrame)
         {
             ClearAllPlaced();
+            UpdateButtonVisuals(0);
         }
 
         for (int i = 0; i < platformSelectKeys.Length; i++)
@@ -89,6 +113,7 @@ public class PlacementManager2D : MonoBehaviour
             if (Keyboard.current[platformSelectKeys[i]].wasPressedThisFrame)
             {
                 StartPlacing(i);
+                UpdateButtonVisuals(i+1);
                 break;
             }
         }
@@ -254,6 +279,7 @@ public class PlacementManager2D : MonoBehaviour
         instanceToTypeIndex[placed] = selectedIndex;
 
         RefreshCountersUI();
+        UpdateButtonVisuals(selectedIndex+1);
     }
 
     private void TryRemovePlatformUnderMouse()
