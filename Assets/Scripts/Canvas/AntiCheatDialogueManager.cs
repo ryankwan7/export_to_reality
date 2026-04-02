@@ -6,6 +6,8 @@ public class AntiCheatDialogueManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text popupText;
     [SerializeField] private float interval = 30f;
+    [SerializeField] private float typingSpeed = 0.04f;
+    [SerializeField] private float timeBeforeHide = 4f;
 
     private float timer;
 
@@ -23,7 +25,8 @@ public class AntiCheatDialogueManager : MonoBehaviour
 
     void Start()
     {
-        popupText.color = new Color(popupText.color.r, popupText.color.g, popupText.color.b, 0f);
+        if (popupText != null && popupText.transform.parent != null)
+            popupText.transform.parent.gameObject.SetActive(false);
     }
 
     void Update()
@@ -39,26 +42,19 @@ public class AntiCheatDialogueManager : MonoBehaviour
 
     private IEnumerator ShowMessage()
     {
-        popupText.text = messages[Random.Range(0, messages.Length)];
+        string message = messages[Random.Range(0, messages.Length)];
 
-        // Fade in
-        yield return Fade(0f, 1f, 0.5f);
-        // Hold
-        yield return new WaitForSeconds(2f);
-        // Fade out
-        yield return Fade(1f, 0f, 0.5f);
-    }
+        popupText.text = "";
+        popupText.transform.parent.gameObject.SetActive(true);
 
-    private IEnumerator Fade(float from, float to, float duration)
-    {
-        float t = 0f;
-        Color c = popupText.color;
-        while (t < duration)
+        foreach (char c in message)
         {
-            t += Time.deltaTime;
-            c.a = Mathf.Lerp(from, to, t / duration);
-            popupText.color = c;
-            yield return null;
+            popupText.text += c;
+            yield return new WaitForSeconds(typingSpeed);
         }
+
+        yield return new WaitForSeconds(timeBeforeHide);
+
+        popupText.transform.parent.gameObject.SetActive(false);
     }
 }
