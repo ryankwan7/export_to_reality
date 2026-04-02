@@ -198,14 +198,17 @@ public class MoverController2D : MonoBehaviour
         if (isBlueScreened) return; // Stop all movement logic if blue screened
 
         rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
-        float direction = moveInput.x < 0 ? -1 : 1;
-        if(!animator.GetBool("isJumping"))
+        if (Mathf.Abs(moveInput.x) > 0.01f)
         {
-            transform.localScale = new Vector3(direction*5, 5, 5);
-        }
-        else // For jump sprites that face the wrong way
-        {
-            transform.localScale = new Vector3(-direction*5, 5, 5);
+            float direction = moveInput.x < 0 ? -1 : 1;
+            if(!animator.GetBool("isJumping"))
+            {
+                transform.localScale = new Vector3(direction*5, 5, 5);
+            }
+            else // For jump sprites that face the wrong way
+            {
+                transform.localScale = new Vector3(-direction*5, 5, 5);
+            }
         }
 
         if (animator.GetBool("isJumping") && IsGrounded())
