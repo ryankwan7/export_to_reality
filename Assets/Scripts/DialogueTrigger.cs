@@ -1,52 +1,71 @@
+using System.Collections;
 using UnityEngine;
 using TMPro;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    // set string in Inspector
-    //[SerializeField] private string dialogueMessage = "Testing Testing I'm Just Suggesting";
+    public enum DialogueTarget { Terminal, Mover }
 
     [System.Serializable]
     public struct DialogueLine
     {
         public string message;
-        public Color color;
+        public DialogueTarget target;
     }
 
+    [Header("Dialogue Lines")]
     [SerializeField] private DialogueLine[] dialogueLines;
-    [SerializeField] private TextMeshProUGUI uiText;
+
+    [Header("Terminal Panel")]
+    [SerializeField] private GameObject terminalBox;
+    [SerializeField] private TextMeshProUGUI terminalText;
+
+    [Header("Mover Panel")]
+    [SerializeField] private GameObject moverBox;
+    [SerializeField] private TextMeshProUGUI moverText;
+
+    [Header("Timing")]
     [SerializeField] private float timeBetweenMessages = 2f;
-
+    [SerializeField] private float typingSpeed = 0.04f;
+    [SerializeField] private float cursorBlinkRate = 0.53f;
     [SerializeField] private float timeBeforeHide = 8f;
-
-    [SerializeField] private GameObject dialogueBox;
 
     private int currentMessageIndex = 0;
     private float timer = 0f;
+    private float cursorTimer = 0f;
     private bool isActive = false;
+    private bool isTyping = false;
+    private bool allLinesDone = false;
+    private bool showCursor = false;
+
+    // Terminal accumulates lines; mover shows one at a time
+    private string terminalCompletedText = "";
+    private string terminalCurrentLine = "";
+    private string moverCurrentLine = "";
 
     private void Start()
     {
-        if(dialogueBox != null)
-        {
-            dialogueBox.SetActive(false);
-        }
+        if (terminalBox != null) terminalBox.SetActive(false);
+        if (moverBox != null)   moverBox.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !isActive)
         {
-
-            if(dialogueBox != null)
-            {
-                dialogueBox.SetActive(true);
-            }
-
-            uiText.text = "";
+            terminalCompletedText = "";
+            terminalCurrentLine = "";
+            moverCurrentLine = "";
+            showCursor = false;
+            cursorTimer = 0f;
             isActive = true;
+            allLinesDone = false;
             currentMessageIndex = 0;
             timer = 0f;
+
+            if (terminalText != null) terminalText.text = "";
+            if (moverText != null)    moverText.text = "";
+
             ShowNextMessage();
         }
     }
@@ -55,21 +74,34 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (isActive)
         {
-            timer += Time.deltaTime;
-            if (timer >= timeBetweenMessages)
+            // Blink cursor on terminal panel
+            cursorTimer += Time.deltaTime;
+            if (cursorTimer >= cursorBlinkRate)
             {
-                timer = 0f;
-                ShowNextMessage();
+                cursorTimer = 0f;
+                showCursor = !showCursor;
+                UpdateTerminalDisplay();
             }
-        }
-        else
-        {
-            timer += Time.deltaTime;
-            if (timer >= timeBeforeHide)
+
+            if (!isTyping)
             {
-                timer = 0f;
-                if(dialogueBox != null){
-                    dialogueBox.SetActive(false);  
+                timer += Time.deltaTime;
+                if (allLinesDone)
+                {
+                    if (timer >= timeBeforeHide)
+                    {
+                        timer = 0f;
+                        isActive = false;
+                        showCursor = false;
+                        UpdateTerminalDisplay();
+                        if (terminalBox != null) terminalBox.SetActive(false);
+                        if (moverBox != null)    moverBox.SetActive(false);
+                    }
+                }
+                else if (timer >= timeBetweenMessages)
+                {
+                    timer = 0f;
+                    ShowNextMessage();
                 }
             }
         }
@@ -80,20 +112,65 @@ public class DialogueTrigger : MonoBehaviour
         if (currentMessageIndex < dialogueLines.Length)
         {
             DialogueLine line = dialogueLines[currentMessageIndex];
-            
-            // Apply color using rich text
-            string coloredMessage = $"<color=#{ColorUtility.ToHtmlStringRGB(line.color)}>{line.message}</color>";
-            
-            uiText.text += ">" + coloredMessage + "\n";
-
-            Debug.Log("DIALOGUE: " + dialogueLines[currentMessageIndex].message);
+            Debug.Log("DIALOGUE: " + line.message);
             currentMessageIndex++;
+            StartCoroutine(TypeLine(line));
         }
         else
         {
+            allLinesDone = true;
             timer = 0f;
-            isActive = false;
         }
+    }
+
+    private IEnumerator TypeLine(DialogueLine line)
+    {
+        isTyping = true;
+
+        if (line.target == DialogueTarget.Terminal)
+        {
+            if (terminalBox != null) terminalBox.SetActive(true);
+
+            if (terminalCompletedText.Length > 0)
+                terminalCompletedText += "\n";
+
+            terminalCurrentLine = "";
+            showCursor = true;
+
+            foreach (char c in line.message)
+            {
+                terminalCurrentLine += c;
+                showCursor = true;
+                UpdateTerminalDisplay();
+                yield return new WaitForSeconds(typingSpeed);
+            }
+
+            terminalCompletedText += terminalCurrentLine;
+            terminalCurrentLine = "";
+            UpdateTerminalDisplay();
+        }
+        else // Mover
+        {
+            if (moverBox != null) moverBox.SetActive(true);
+
+            moverCurrentLine = "";
+            if (moverText != null) moverText.text = "";
+
+            foreach (char c in line.message)
+            {
+                moverCurrentLine += c;
+                if (moverText != null) moverText.text = moverCurrentLine;
+                yield return new WaitForSeconds(typingSpeed);
+            }
+        }
+
+        isTyping = false;
+    }
+
+    private void UpdateTerminalDisplay()
+    {
+        if (terminalText != null)
+            terminalText.text = terminalCompletedText + terminalCurrentLine + (showCursor ? "_" : "");
     }
 
     // Debug, print to console
@@ -101,7 +178,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         foreach (DialogueLine line in dialogueLines)
         {
-            Debug.Log("DIALOGUE: " + line.message);
+            Debug.Log("DIALOGUE [" + line.target + "]: " + line.message);
         }
     }
 }
