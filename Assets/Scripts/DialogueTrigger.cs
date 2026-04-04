@@ -24,12 +24,16 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private GameObject moverBox;
     [SerializeField] private TextMeshProUGUI moverText;
 
+    [Header("Behaviour")]
+    [SerializeField] private bool triggerOnce = false;
+
     [Header("Timing")]
     [SerializeField] private float timeBetweenMessages = 2f;
     [SerializeField] private float typingSpeed = 0.04f;
     [SerializeField] private float cursorBlinkRate = 0.53f;
     [SerializeField] private float timeBeforeHide = 8f;
 
+    private bool hasTriggered = false;
     private int currentMessageIndex = 0;
     private float timer = 0f;
     private float cursorTimer = 0f;
@@ -51,8 +55,9 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !isActive)
+        if (other.CompareTag("Player") && !isActive && !(triggerOnce && hasTriggered))
         {
+            hasTriggered = true;
             terminalCompletedText = "";
             terminalCurrentLine = "";
             moverCurrentLine = "";
