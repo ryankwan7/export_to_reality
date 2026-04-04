@@ -79,64 +79,36 @@ public class PulleySystem2D : MonoBehaviour
         MovePlatformPair(-delta, +delta);
     }
 
-    // private void MovePlatformPair(float deltaAY, float deltaBY)
-    // {
-    //     Vector3 a = platformA.position;
-    //     Vector3 b = platformB.position;
-
-    //     float targetAY = a.y + deltaAY;
-    //     float targetBY = b.y + deltaBY;
-
-    //     // Clamp to limits
-    //     float clampedAY = Mathf.Clamp(targetAY, platformAMinY, platformAMaxY);
-    //     float clampedBY = Mathf.Clamp(targetBY, platformBMinY, platformBMaxY);
-
-    //     // Rope constraint feel
-    //     // If one side hits a limit, the other side should also stop for that step.
-    //     // We do that by applying only the “allowed” movement.
-    //     float appliedAY = clampedAY - a.y;
-    //     float appliedBY = clampedBY - b.y;
-
-    //     float applied = 0f;
-
-    //     // We want equal magnitude and opposite direction.
-    //     // Pick the smaller magnitude movement that both sides can do this frame.
-    //     float magA = Mathf.Abs(appliedAY);
-    //     float magB = Mathf.Abs(appliedBY);
-    //     float mag = Mathf.Min(magA, magB);
-
-    //     if (mag <= 0f) return;
-
-    //     applied = Mathf.Sign(appliedAY) * mag; // sign of A determines direction
-
-    //     a.y += applied;
-    //     b.y -= applied;
-
-    //     platformA.position = a;
-    //     platformB.position = b;
-    // }
-
     private void MovePlatformPair(float deltaAY, float deltaBY)
     {
         Rigidbody2D rbA = platformA.GetComponent<Rigidbody2D>();
         Rigidbody2D rbB = platformB.GetComponent<Rigidbody2D>();
 
+        // 1. Calculate where A wants to go and clamp it
         float targetAY = platformA.position.y + deltaAY;
-        float targetBY = platformB.position.y + deltaBY;
-
         float clampedAY = Mathf.Clamp(targetAY, platformAMinY, platformAMaxY);
-        float clampedBY = Mathf.Clamp(targetBY, platformBMinY, platformBMaxY);
 
-        float finalDeltaY = (clampedAY - platformA.position.y);
+        // 2. Calculate the MIRROR target for B based on the relative distance
+        // This ensures they stay in a perfect 'sum' balance
+        float totalDistanceA = platformAMaxY - platformAMinY;
+        float percentA = (clampedAY - platformAMinY) / totalDistanceA;
+        
+        // Platform B's position is the inverse percentage of its own range
+        float clampedBY = platformBMaxY - (percentA * (platformBMaxY - platformBMinY));
 
-        // Check if running through ground layer
-        if (IsPathBlocked(rbA, finalDeltaY) || IsPathBlocked(rbB, -finalDeltaY))
+        // 3. Final Deltas for collision checking
+        float finalDeltaA = clampedAY - platformA.position.y;
+        float finalDeltaB = clampedBY - platformB.position.y;
+
+        // 4. If either is blocked, stop both
+        if (IsPathBlocked(rbA, finalDeltaA) || IsPathBlocked(rbB, finalDeltaB))
         {
-            return; // Stop moving if either side is blocked!
+            return; 
         }
 
-        rbA.MovePosition(new Vector2(platformA.position.x, platformA.position.y + finalDeltaY));
-        rbB.MovePosition(new Vector2(platformB.position.x, platformB.position.y - finalDeltaY));
+        // 5. Move them to their absolute synchronized positions
+        rbA.MovePosition(new Vector2(platformA.position.x, clampedAY));
+        rbB.MovePosition(new Vector2(platformB.position.x, clampedBY));
     }
 
     private bool IsPathBlocked(Rigidbody2D rb, float deltaY)
@@ -158,6 +130,26 @@ public class PulleySystem2D : MonoBehaviour
         int count = rb.Cast(direction, filter, results, distance+ 0.01f);
 
         return count > 0;
+    }
+
+    public void ResetPulley()
+    {
+        if (platformA == null || platformB == null) return;
+
+        float totalDistanceA = platformAMaxY - platformAMinY;
+        float originalPercentA = (originalPlatformAY - platformAMinY) / totalDistanceA;
+
+        float originalPlatformBY = platformBMaxY - (originalPercentA * (platformBMaxY - platformBMinY));
+
+        // 3. Teleport them using transform.position (Bypasses physics/IsPathBlocked)
+        platformA.position = new Vector3(platformA.position.x, originalPlatformAY, platformA.position.z);
+        platformB.position = new Vector3(platformB.position.x, originalPlatformBY, platformB.position.z);
+
+        // 4. Sync the Rigidbody velocity so they don't keep moving after teleporting
+        Rigidbody2D rbA = platformA.GetComponent<Rigidbody2D>();
+        Rigidbody2D rbB = platformB.GetComponent<Rigidbody2D>();
+        if (rbA != null) rbA.linearVelocity = Vector2.zero;
+        if (rbB != null) rbB.linearVelocity = Vector2.zero;
     }
 
 }

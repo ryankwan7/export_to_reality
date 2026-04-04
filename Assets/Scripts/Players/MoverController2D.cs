@@ -58,6 +58,17 @@ public class MoverController2D : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         rb.angularVelocity = 0f;
 
+        PulleySystem2D[] allPulleys = Object.FindObjectsByType<PulleySystem2D>(FindObjectsSortMode.None);
+        foreach (PulleySystem2D pulley in allPulleys)
+        {
+            pulley.ResetPulley();
+        }
+        PlacementManager2D placementManager = Object.FindAnyObjectByType<PlacementManager2D>();
+        if (placementManager != null)
+        {
+            placementManager.ClearAllPlaced();
+        }
+
         OnRespawnCallback?.Invoke();
 
         Debug.Log($"Player respawned at {respawnPosition}");
