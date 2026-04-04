@@ -178,6 +178,33 @@ public class DialogueTrigger : MonoBehaviour
             terminalText.text = terminalCompletedText + terminalCurrentLine + (showCursor ? "_" : "");
     }
 
+#if UNITY_EDITOR
+    [System.NonSerialized] private int _validatedLineCount = -1;
+
+    private void OnValidate()
+    {
+        if (dialogueLines == null) return;
+
+        if (_validatedLineCount == -1)
+        {
+            _validatedLineCount = dialogueLines.Length;
+            return;
+        }
+
+        if (dialogueLines.Length > _validatedLineCount && _validatedLineCount >= 1)
+        {
+            int last = dialogueLines.Length - 1;
+            DialogueLine newLine = dialogueLines[last];
+            newLine.target = dialogueLines[last - 1].target == DialogueTarget.Terminal
+                ? DialogueTarget.Mover
+                : DialogueTarget.Terminal;
+            dialogueLines[last] = newLine;
+        }
+
+        _validatedLineCount = dialogueLines.Length;
+    }
+#endif
+
     // Debug, print to console
     public void PrintDialogueToConsole()
     {
