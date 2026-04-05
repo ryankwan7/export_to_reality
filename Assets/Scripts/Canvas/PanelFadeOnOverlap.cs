@@ -12,6 +12,10 @@ public class PanelFadeOnOverlap : MonoBehaviour
     [SerializeField] private float fadedAlpha = 0.15f;
     [SerializeField] private float fadeSpeed = 8f;
 
+    [Header("Fade Triggers")]
+    [SerializeField] private bool fadeOnMover = true;
+    [SerializeField] private bool fadeOnMouse = true;
+
     private CanvasGroup canvasGroup;
     private RectTransform rectTransform;
 
@@ -24,10 +28,10 @@ public class PanelFadeOnOverlap : MonoBehaviour
 
     private void Update()
     {
-        bool shouldFade = IsMoverBehind() || IsMouseOver();
+        bool shouldFade = (fadeOnMover && IsMoverBehind()) || (fadeOnMouse && IsMouseOver());
         float targetAlpha = shouldFade ? fadedAlpha : 1f;
         canvasGroup.alpha = Mathf.Lerp(canvasGroup.alpha, targetAlpha, Time.deltaTime * fadeSpeed);
-        canvasGroup.blocksRaycasts = !shouldFade;
+        canvasGroup.blocksRaycasts = !fadeOnMouse || !shouldFade;
     }
 
     private bool IsMoverBehind()
