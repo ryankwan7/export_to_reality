@@ -26,7 +26,7 @@ public class LevelSelector : MonoBehaviour
         {
             Debug.Log("LEVEL SELECTOR: Player entered level selector trigger.");
             // Load the level selector scene
-            UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelector");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("EnhancedLevelSelector");
         }
     }
 }
