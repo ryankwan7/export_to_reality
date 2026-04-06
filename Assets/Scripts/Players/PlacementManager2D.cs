@@ -143,7 +143,8 @@ private void UpdateButtonVisuals(int activeIndex)
 
             if (Mouse.current.rightButton.wasPressedThisFrame)
             {
-                StopPlacing();
+                if (!TryRemovePlatformUnderMouse())
+                    StopPlacing();
             }
         }
         else
@@ -282,19 +283,20 @@ private void UpdateButtonVisuals(int activeIndex)
         UpdateButtonVisuals(selectedIndex+1);
     }
 
-    private void TryRemovePlatformUnderMouse()
+    private bool TryRemovePlatformUnderMouse()
     {
         Vector2 mouseScreen2D = Mouse.current.position.ReadValue();
         Vector3 mouseScreen = new(mouseScreen2D.x, mouseScreen2D.y, -cam.transform.position.z);
         Vector2 mouseWorld = cam.ScreenToWorldPoint(mouseScreen);
 
         Collider2D hit = Physics2D.OverlapCircle(mouseWorld, clickRadius, removableMask);
-        if (hit == null) return;
+        if (hit == null) return false;
 
         PlaceablePlatform marker = hit.GetComponentInParent<PlaceablePlatform>();
-        if (marker == null) return;
+        if (marker == null) return false;
 
         RemovePlatform(marker.gameObject);
+        return true;
     }
 
     private void RemovePlatform(GameObject platform)
