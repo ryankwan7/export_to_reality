@@ -299,7 +299,7 @@ private void UpdateButtonVisuals(int activeIndex)
         return true;
     }
 
-    private void RemovePlatform(GameObject platform)
+    public void RemovePlatform(GameObject platform)
     {
         if (platform == null) return;
 
