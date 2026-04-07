@@ -37,7 +37,7 @@ public class MoverController2D : MonoBehaviour
     private float blueScreenDuration = 0f;
     private Vector3 originalPosBeforeBSOD;
     public bool isRebooting = false;
-
+    private float lastFacingDirection = 1f; // 1 for right, -1 for left
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -211,16 +211,22 @@ public class MoverController2D : MonoBehaviour
         rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
         if (Mathf.Abs(moveInput.x) > 0.01f)
         {
-            float direction = moveInput.x < 0 ? -1 : 1;
-            if(!animator.GetBool("isJumping"))
-            {
-                transform.localScale = new Vector3(direction*5, 5, 5);
-            }
-            else // For jump sprites that face the wrong way
-            {
-                transform.localScale = new Vector3(-direction*5, 5, 5);
-            }
+            lastFacingDirection = moveInput.x < 0 ? -1f : 1f;
         }
+        float flipModifier = animator.GetBool("isJumping") ? -1f : 1f;
+        float finalScaleX = lastFacingDirection * 5f * flipModifier; 
+
+        transform.localScale = new Vector3(finalScaleX, 5f, 5f);
+            // float direction = moveInput.x < 0 ? -1 : 1;
+            // if(!animator.GetBool("isJumping"))
+            // {
+            //     transform.localScale = new Vector3(direction*5, 5, 5);
+            // }
+            // else // For jump sprites that face the wrong way
+            // {
+            //     transform.localScale = new Vector3(-direction*5, 5, 5);
+            // }
+    
 
         if (animator.GetBool("isJumping") && IsGrounded())
         {
